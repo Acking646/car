@@ -4,7 +4,7 @@
 
 ### Detecting and Allocating Dynamic Compute for Efficient Mixture-of-Experts Large Language Models
 
-<img src="assets/car_framework.png" alt="CAR framework" width="100%">
+<img src="assets/car_framework.svg" alt="CAR framework" width="100%">
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-B31B1B.svg)](paper/CAR.pdf)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB.svg)](https://www.python.org/)
