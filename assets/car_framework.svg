@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Complexity-Aware Routing framework</title>
+  <desc id="desc">CAR uses teacher-derived token complexity labels to align a recurrent complexity predictor and dynamically allocate experts during inference.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081221"/>
+      <stop offset="0.5" stop-color="#10233c"/>
+      <stop offset="1" stop-color="#0b182b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#59d9ff"/>
+      <stop offset="1" stop-color="#8d7cff"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffcf65"/>
+      <stop offset="1" stop-color="#ff7f70"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000814" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#67dcff"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" rx="34" fill="url(#background)"/>
+  <circle cx="1425" cy="110" r="230" fill="#715bff" opacity="0.1"/>
+  <circle cx="170" cy="830" r="260" fill="#35d3ff" opacity="0.08"/>
+  <text x="800" y="92" text-anchor="middle" fill="#f5fbff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="64" font-weight="760" letter-spacing="3">CAR</text>
+  <text x="800" y="137" text-anchor="middle" fill="#a9bfd6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" letter-spacing="2">COMPLEXITY-AWARE ROUTING</text>
+  <text x="800" y="178" text-anchor="middle" fill="#6fe2ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21">Match token difficulty with dynamic expert compute</text>
+  <g filter="url(#shadow)">
+    <rect x="85" y="245" width="420" height="470" rx="28" fill="#122943" stroke="#285276" stroke-width="2"/>
+    <rect x="590" y="245" width="420" height="470" rx="28" fill="#152846" stroke="#405482" stroke-width="2"/>
+    <rect x="1095" y="245" width="420" height="470" rx="28" fill="#172640" stroke="#534c79" stroke-width="2"/>
+  </g>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <circle cx="137" cy="300" r="23" fill="#1f516e"/>
+    <text x="137" y="308" text-anchor="middle" fill="#83e7ff" font-size="22" font-weight="700">1</text>
+    <text x="176" y="308" fill="#f1f8ff" font-size="28" font-weight="700">Offline labeling</text>
+    <rect x="132" y="354" width="326" height="82" rx="17" fill="#0d1c30" stroke="#285879"/>
+    <text x="295" y="386" text-anchor="middle" fill="#eaf7ff" font-size="21" font-weight="650">Frozen teacher model</text>
+    <text x="295" y="414" text-anchor="middle" fill="#92aac1" font-size="17">token probability distribution</text>
+    <line x1="295" y1="438" x2="295" y2="477" stroke="#67dcff" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="122" y="488" width="156" height="96" rx="17" fill="#173953" stroke="#3a81a5"/>
+    <text x="200" y="524" text-anchor="middle" fill="#77e4ff" font-size="20" font-weight="700">Surprisal</text>
+    <text x="200" y="554" text-anchor="middle" fill="#b6c8d9" font-size="17">S = −log₂ p</text>
+    <rect x="312" y="488" width="156" height="96" rx="17" fill="#263451" stroke="#6770a7"/>
+    <text x="390" y="524" text-anchor="middle" fill="#b8aaff" font-size="20" font-weight="700">Entropy</text>
+    <text x="390" y="554" text-anchor="middle" fill="#b6c8d9" font-size="17">H = −Σp log₂p</text>
+    <rect x="159" y="621" width="272" height="55" rx="27" fill="#15344a" stroke="#3e7994"/>
+    <text x="295" y="656" text-anchor="middle" fill="#ddf7ff" font-size="19">Robust normalization</text>
+    <circle cx="642" cy="300" r="23" fill="#38466f"/>
+    <text x="642" y="308" text-anchor="middle" fill="#c5baff" font-size="22" font-weight="700">2</text>
+    <text x="681" y="308" fill="#f1f8ff" font-size="28" font-weight="700">Predictor alignment</text>
+    <rect x="637" y="354" width="326" height="72" rx="17" fill="#0e1c31" stroke="#42567d"/>
+    <text x="800" y="386" text-anchor="middle" fill="#eaf7ff" font-size="21" font-weight="650">Frozen MoE backbone</text>
+    <text x="800" y="410" text-anchor="middle" fill="#92aac1" font-size="16">hidden state at every layer</text>
+    <line x1="800" y1="428" x2="800" y2="467" stroke="#8e85ff" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="635" y="478" width="150" height="104" rx="19" fill="#203755" stroke="#5377a4"/>
+    <text x="710" y="518" text-anchor="middle" fill="#d9eaff" font-size="21" font-weight="700">RCM</text>
+    <text x="710" y="548" text-anchor="middle" fill="#9fb5ca" font-size="16">cross-layer</text>
+    <text x="710" y="569" text-anchor="middle" fill="#9fb5ca" font-size="16">recurrence</text>
+    <line x1="789" y1="530" x2="836" y2="530" stroke="#8e85ff" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="846" y="478" width="119" height="104" rx="19" fill="#2a3156" stroke="#766bb0"/>
+    <text x="905" y="518" text-anchor="middle" fill="#d4c8ff" font-size="21" font-weight="700">CP</text>
+    <text x="905" y="548" text-anchor="middle" fill="#aeb4d2" font-size="16">predict</text>
+    <text x="905" y="569" text-anchor="middle" fill="#aeb4d2" font-size="16">Ŝ and Ĥ</text>
+    <rect x="664" y="621" width="272" height="55" rx="27" fill="#252e50" stroke="#645a9b"/>
+    <text x="800" y="656" text-anchor="middle" fill="#eeeaff" font-size="19">MSE alignment only</text>
+    <circle cx="1147" cy="300" r="23" fill="#514368"/>
+    <text x="1147" y="308" text-anchor="middle" fill="#ffd58a" font-size="22" font-weight="700">3</text>
+    <text x="1186" y="308" fill="#f1f8ff" font-size="28" font-weight="700">Dynamic inference</text>
+    <rect x="1142" y="354" width="326" height="72" rx="17" fill="#101b2d" stroke="#514d71"/>
+    <text x="1305" y="386" text-anchor="middle" fill="#f6f0ff" font-size="21" font-weight="650">Effective complexity</text>
+    <text x="1305" y="410" text-anchor="middle" fill="#aaafc5" font-size="16">C<tspan baseline-shift="sub" font-size="12">eff</tspan> = fuse(Ŝ, Ĥ)</text>
+    <line x1="1305" y1="428" x2="1305" y2="467" stroke="#ffb778" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="1172" y="478" width="266" height="81" rx="20" fill="#352c48" stroke="#8e668e"/>
+    <text x="1305" y="510" text-anchor="middle" fill="#ffe3b5" font-size="21" font-weight="700">DEA</text>
+    <text x="1305" y="539" text-anchor="middle" fill="#c5b8ca" font-size="17">continuous score → dynamic k</text>
+    <line x1="1305" y1="561" x2="1305" y2="597" stroke="#ffb778" stroke-width="3" marker-end="url(#arrow)"/>
+    <g>
+      <circle cx="1190" cy="641" r="31" fill="url(#warm)"/>
+      <circle cx="1267" cy="641" r="31" fill="url(#warm)"/>
+      <circle cx="1344" cy="641" r="31" fill="url(#warm)"/>
+      <circle cx="1421" cy="641" r="31" fill="#26334a" stroke="#6a6f86"/>
+      <text x="1190" y="648" text-anchor="middle" fill="#1c2031" font-size="17" font-weight="800">E1</text>
+      <text x="1267" y="648" text-anchor="middle" fill="#1c2031" font-size="17" font-weight="800">E2</text>
+      <text x="1344" y="648" text-anchor="middle" fill="#1c2031" font-size="17" font-weight="800">E3</text>
+      <text x="1421" y="648" text-anchor="middle" fill="#96a1b5" font-size="20">···</text>
+    </g>
+  </g>
+  <line x1="511" y1="480" x2="574" y2="480" stroke="#67dcff" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1016" y1="480" x2="1079" y2="480" stroke="#67dcff" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="278" y="774" width="1044" height="67" rx="33" fill="#0d1b2d" stroke="url(#accent)" stroke-width="2"/>
+  <text x="800" y="817" text-anchor="middle" fill="#dff6ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="600">Easy tokens use fewer experts · Hard tokens receive broader expert collaboration</text>
+</svg>

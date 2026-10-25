@@ -1,0 +1,7 @@
+accelerate>=1.0,<2
+datasets>=3.0,<5
+numpy>=1.26,<3
+safetensors>=0.4,<1
+torch>=2.4,<3
+tqdm>=4.66,<5
+transformers>=4.51,<5

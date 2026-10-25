@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use CAR, please cite this work."
+title: "Complexity-Aware Routing: Detecting and Allocating Dynamic Compute for Efficient Mixture-of-Experts Large Language Models"
+type: software
+authors:
+  - family-names: Li
+    given-names: Jiahe
+  - family-names: Hu
+    given-names: Saisai
+  - family-names: Li
+    given-names: Menghao
+  - family-names: Zhu
+    given-names: Shaolin
+  - family-names: Xiong
+    given-names: Deyi
+repository-code: "https://github.com/Acking646/car"
+date-released: 2026-10-25
+license: Apache-2.0
