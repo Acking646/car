@@ -6,12 +6,15 @@
 
 <img src="assets/car_framework.svg" alt="CAR framework" width="100%">
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-B31B1B.svg)](paper/CAR.pdf)
+[![Paper](https://img.shields.io/badge/Paper-EMNLP%202026-B31B1B.svg)](https://aclanthology.org/2026.emnlp-main.1206/)
+[![PDF](https://img.shields.io/badge/PDF-ACL%20Anthology-B31B1B.svg)](https://aclanthology.org/2026.emnlp-main.1206.pdf)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.4+-EE4C2C.svg)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-Apache--2.0-4C8BF5.svg)](LICENSE)
 
 </div>
+
+Published in **EMNLP 2026**, pages 27594–27610. [ACL Anthology](https://aclanthology.org/2026.emnlp-main.1206/) | [Paper PDF](https://aclanthology.org/2026.emnlp-main.1206.pdf)
 
 CAR replaces static Top-k routing with token-wise compute allocation. It learns token complexity from two teacher-derived information-theoretic signals—Shannon Surprisal and Predictive Entropy—then maps the predicted complexity to a dynamic expert budget.
 
@@ -128,9 +131,11 @@ CAR checkpoints use the Hugging Face `AutoModelForCausalLM` interface with `trus
 ## Citation
 
 ```bibtex
-@misc{li2026car,
+@inproceedings{li2026complexity,
   title={Complexity-Aware Routing: Detecting and Allocating Dynamic Compute for Efficient Mixture-of-Experts Large Language Models},
   author={Li, Jiahe and Hu, Saisai and Li, Menghao and Zhu, Shaolin and Xiong, Deyi},
+  booktitle={Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
+  pages={27594--27610},
   year={2026}
 }
 ```

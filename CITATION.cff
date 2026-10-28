@@ -16,3 +16,24 @@ authors:
 repository-code: "https://github.com/Acking646/car"
 date-released: 2026-10-25
 license: Apache-2.0
+preferred-citation:
+  type: conference-paper
+  title: "Complexity-Aware Routing: Detecting and Allocating Dynamic Compute for Efficient Mixture-of-Experts Large Language Models"
+  authors:
+    - family-names: Li
+      given-names: Jiahe
+    - family-names: Hu
+      given-names: Saisai
+    - family-names: Li
+      given-names: Menghao
+    - family-names: Zhu
+      given-names: Shaolin
+    - family-names: Xiong
+      given-names: Deyi
+  collection-title: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing"
+  year: 2026
+  start: 27594
+  end: 27610
+  publisher:
+    name: "Association for Computational Linguistics"
+  url: "https://aclanthology.org/2026.emnlp-main.1206/"
